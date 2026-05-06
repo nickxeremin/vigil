@@ -1,5 +1,5 @@
 {
-  "name": "@vigil/database",
+  "name": "@vigil/dto",
   "version": "1.0.0",
   "private": true,
   "main": "./dist/index.js",
@@ -15,20 +15,14 @@
   "scripts": {
     "build": "tsup ./src/index.ts --dts",
     "dev": "tsup",
-    "clean": "rm -rf dist",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@vigil/typescript-config": "workspace:*",
-    "drizzle-kit": "^0.31.10",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "drizzle-orm": "^0.45.2",
-    "postgres": "^3.4.9"
+    "zod": "^4.4.3"
   }
 }
