@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+
+# Build artifacts
+**/dist
+**/build
+**/out
+**/.turbo
+.next
+
+# TypeScript
+*.tsbuildinfo
+
+# Package manager
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Coverage
+coverage
+.nyc_output
+
+# Env files
+.env*

@@ -1,0 +1,8 @@
+{
+  "extends": "@vigil/typescript-config/nestjs.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

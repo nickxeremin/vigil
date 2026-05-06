@@ -1,0 +1,131 @@
+# ==============================================================================
+# .GITIGNORE: TURBOREPO + REACT (NEXTJS) + NESTJS
+# ==============================================================================
+
+# 1. Зависимости (Dependencies)
+# ------------------------------------------------------------------------------
+node_modules/
+.pnpm-store/
+.yarn/cache
+# ВАЖНО: Lock-файлы (pnpm-lock.yaml, package-lock.json, yarn.lock) НЕ ИГНОРИРУЕМ!
+
+# 2. Артефакты сборки и кэширования (Build & Cache)
+# ------------------------------------------------------------------------------
+# Turborepo — кэш на всех уровнях монорепы
+**/.turbo/
+.turbo/
+
+# TypeScript (критично для инкрементальной сборки в монорепах)
+*.tsbuildinfo
+
+# Vite / React / NestJS (dist, build, out — на любом уровне вложенности)
+**/dist/
+**/dist-ssr/
+**/build/
+**/out/
+
+# Source maps — не нужны в репо (генерируются при сборке)
+**/*.js.map
+**/*.d.ts.map
+
+# Кэш сборщиков
+.cache/
+.parcel-cache/
+
+# 3. Переменные окружения и секреты (Security)
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+# Примечание: .env.example и .env.template ДОЛЖНЫ быть в репозитории
+
+# 4. Логи и диагностика (Logs & Diagnostics)
+# ------------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 5. Тестирование (Testing & Coverage)
+# ------------------------------------------------------------------------------
+coverage/
+.nyc_output/
+.jest-cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+vitest.config.*.timestamp-*
+
+# 6. Кодогенерация (Code Generation)
+# ------------------------------------------------------------------------------
+# Раскомментировать при использовании Prisma / GraphQL codegen / OpenAPI
+# generated/
+# src/generated/
+# **/*.generated.ts
+
+# 7. Линтеры и форматеры (Linters & Formatters)
+# ------------------------------------------------------------------------------
+.eslintcache
+.stylelintcache
+.prettiercache
+
+# 8. Настройки редакторов и IDE (Editors)
+# ------------------------------------------------------------------------------
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iws
+*.iml
+*.ipr
+
+# VS Code — игнорируем все, кроме командных настроек монорепы
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# 9. Системные файлы ОС (OS Files)
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# 10. Прочее (Cloud / Docker / Deployment)
+# ------------------------------------------------------------------------------
+.vercel/
+.nx/
+.next/
+docker-compose.override.yml
+
+# Vite локальные конфиги
+*.local
