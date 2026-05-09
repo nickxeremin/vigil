@@ -6,7 +6,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "nest start --watch",
+    "dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -20,8 +20,16 @@
     "@nestjs/common": "^11.1.19",
     "@nestjs/core": "^11.1.19",
     "@nestjs/platform-express": "^11.1.19",
+    "@thallesp/nestjs-better-auth": "^2.6.0",
+    "@vigil/database": "workspace:*",
+    "@vigil/domain": "workspace:*",
+    "@vigil/errors": "workspace:*",
+    "better-auth": "^1.6.9",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.2"
+    "rxjs": "^7.8.2",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
